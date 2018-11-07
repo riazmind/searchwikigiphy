@@ -6,6 +6,15 @@ export const environment = {
   production: false
 };
 
+export const giphy = {
+  apiKey: '', // get key from giphy  
+  urlBase: 'https://api.giphy.com/v1/gifs/search?limit=5&offset=0&rating=G&lang=en&api_key='
+};
+
+export const wiki = {
+  urlBase: 'https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=10&srsearch='
+};
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

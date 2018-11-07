@@ -1,0 +1,31 @@
+<form class="m-4">
+    <div class="card p-1 bg-warning text-dark">
+        <div class="form-group">
+          <label class="m-2" for="searchInput">Search:</label>
+          <input class="m-2" type="text" id="searchInput" placeholder="Type here" #searchInput>
+
+          <button class="btn btn-outline-primary m-2" (click)="search(searchInput.value)">
+              Search
+          </button>
+        </div>
+    </div>
+</form>
+
+<!-- <div class="card p-1 m-4" *ngIf="wikiResults.length !== 0"> -->
+<div class="card p-1 m-4" *ngIf="totalWikiResults">    
+  <h4 class="mx-auto">Wikipedia Results</h4>
+  <div class="card p-2 m-2 bg-light text-dark" *ngFor="let result of wikiResults">{{ result }}</div>
+</div>
+
+
+<!-- 
+    <div class="card p-1 m-4" *ngIf="giphyResults.length !== 0"> 
+        .length property does not work in testing 
+-->
+<div class="card p-1 m-4" *ngIf="totalGiphyResults">
+  <h4 class="mx-auto">Giphy Results</h4>
+  
+  <div class="p-2" *ngFor="let result of giphyResults">
+      <img src="{{ result }}">
+  </div>
+</div>
